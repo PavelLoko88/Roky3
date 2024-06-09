@@ -1,5 +1,7 @@
-import {Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import StoreProvider from "./GlobalRedux/provider";
+
 
 const mostserrat = Montserrat({
   weight: ["400", "700"],
@@ -15,7 +17,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={mostserrat.className}>
         <div className="container">
-          {children}
+
+
+          <StoreProvider>
+            {children}
+
+          </StoreProvider>
+
+
         </div>
       </body>
     </html>
