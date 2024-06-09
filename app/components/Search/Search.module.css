@@ -1,0 +1,124 @@
+.searchBlock {
+    margin-top: 50px;
+    padding: 40px;
+    width: 700px;
+    border-radius: 35px;
+    background-color: #2f3045;
+  }
+  
+  .upSearch {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .downSearch {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  /* props */
+  .searchInput {
+    width: 80%;
+  }
+  
+  .searchBtn {
+    width: 15%;
+    transition: .5s ease-in-out;
+  }
+  
+  .field {
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .searchSelect {
+    padding-right:35px;
+    margin-top: 5px;
+    width: 50%;
+    appearance: none;
+    background: url('../../img/arrowDown.svg') no-repeat right;
+    background-color: white;
+    background-position-x: calc(100% - 8px);
+  }
+  
+  .searchLabel {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    color: white;
+    font-size: 16px;
+  }
+  
+  /*button */
+  @media screen and (width> 1000px) {
+    .searchBtn:hover {
+      opacity: .5;
+    }
+  }
+  
+  @media screen and (width< 1000px) {
+    .searchBtn:hover {
+      opacity: 1;
+    }
+  
+    .searchBtn:active {
+      opacity: .5;
+    }
+  
+  }
+
+  /* ADAPRIV */
+  @media screen and (width< 700px) {
+    .searchBlock {
+      margin-top: 40px;
+      padding: 30px;
+      width:500px;
+    }
+
+    .field {
+      font-size: 16px;     
+    }
+  
+  }
+
+  @media screen and (width< 500px) {
+    .searchBlock {
+      margin-top: 30px;
+      padding: 25px;
+      width:360px;
+    }
+
+    .field {
+      font-size: 13px;     
+    }
+
+    .searchLabel {
+      font-size: 12px;
+      width: 45%;
+    }
+  }
+
+  @media screen and (width< 365px) {
+    .searchBlock {
+      margin-top: 20px;
+      padding: 20px;
+      width:315px;
+    }
+
+    .field {
+      font-size: 12px;     
+    }
+
+    .searchLabel {
+      font-size: 11px;
+      width: 4%;
+    }
+  }

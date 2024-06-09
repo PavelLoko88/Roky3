@@ -2,5 +2,30 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* outline: 2px solid green; */
 }
 
+body {
+  display: flex;
+  justify-content: center;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+  color: black;
+}
+
+@media screen and (width < 1400px) {
+  .container {
+    width: 100%;
+  }
+}

@@ -1,23 +1,23 @@
-import { Roboto } from "next/font/google";
+import {Montserrat } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
+const mostserrat = Montserrat({
   weight: ["400", "700"],
-   subsets: ["latin"] 
-  });
+  subsets: ["latin"]
+});
 
 export const metadata = {
   title: "Search news",
   description: "Search news",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        
-        {children}
-        </body>
+      <body className={mostserrat.className}>
+        <div className="container">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
