@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from './fullPost.module.css'
 
 import { apiFake } from '@/app/ApiFake/apiFake'
+import { converDate } from '@/app/tool/tool'
 
 const FullPost = ({ parametrs }) => {
 
@@ -13,7 +14,7 @@ const FullPost = ({ parametrs }) => {
             <Link href="http://localhost:3000" className={styles.backBtn}>Назад</Link>
             <h1 className={styles.newsTitle}>{oneNews.webTitle}</h1>
             <div className={styles.newsInfo}>
-                <p className={styles.newsDate}>{oneNews.webPublicationDate}</p>
+                <p className={styles.newsDate}>{converDate(new Date(oneNews.webPublicationDate))} </p>
                 <a href={oneNews.guardianUrl} className={styles.linkGuardian}>read on Guardian</a>
             </div>
             <div className={styles.newsInfoMain}>
