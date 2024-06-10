@@ -191,3 +191,4 @@ He told the BBC on Sunday that he supported raising the personal tax allowance t
         guardianUrl: "https://www.theguardian.com/politics/article/2024/jun/09/nigel-farage-questions-convicted-fraudster-campaign-role-george-cottrell",
     },
 ]
+

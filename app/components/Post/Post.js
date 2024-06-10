@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './Post.module.css'
 import Link from 'next/link'
+import { useAppSelector } from '@/app/GlobalRedux/utils/hooks';
 
 const Post = ({ postContent }) => {
 
+    // CONVERT DATE
     function converDate(dates) {
         const date = new Date(dates);
         const day = date.getDate().toString().padStart(2, '0');
@@ -16,6 +18,7 @@ const Post = ({ postContent }) => {
         return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
     }
 
+    // LIMITED ITEMS
     return (
         <div className={styles.post}>
             <img className={styles.postImage} src={postContent.imageUrl} />

@@ -1,10 +1,11 @@
 'use client'
+import { sortDate } from '@/app/ApiFake/newApiFake';
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     search: "news",
-    sort: "",
-    items: 20,
+    sort: "sort by relevance",
+    items: 6,
 }
 
 export const searchSlice = createSlice({
@@ -12,14 +13,18 @@ export const searchSlice = createSlice({
     initialState,
     reducers: {
        addSearch: (state, action)=>{
-        state.search = action.payload
+        state.search = action.payload;
+       }, 
+       addItems: (state, action)=>{
+        
+        state.items = action.payload
+        sortDate(state.sort, state.items);
        },
        addSort: (state, action)=>{
         state.sort = action.payload
+        sortDate(state.sort, state.items);
        },
-       addItems: (state, action)=>{
-        state.items = action.payload
-       }
+      
 
   },
 })

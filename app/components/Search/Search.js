@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import styles from './Search.module.css'
 import { useAppDispatch, useAppSelector } from '@/app/GlobalRedux/utils/hooks'
-import { addItems, addSearch, addSort} from '@/app/GlobalRedux/utils/searchRedux/searchSlice';
+import { addItems, addSearch, addSort } from '@/app/GlobalRedux/utils/searchRedux/searchSlice';
 
 
 
@@ -18,13 +18,9 @@ const Search = () => {
                     <input ref={inputSearch} className={`${styles.field} ${styles.searchInput}`} placeholder="Search..." />
                     <button type="button" onClick={(e) => {
                         // dispatch(addSearch(inputSearch.current.value))
-                        // dispatch(addSort(selectSort.current.value))
-                        // dispatch(addItems(selectItems.current.value))
-                        console.log(selectItems.current.value)
-                        console.log(selectSort.current.value)
-                        console.log(inputSearch.current.value)
-                        
-                        
+
+                        dispatch(addSort(selectSort.current.value))
+                        dispatch(addItems(selectItems.current.value))
                     }}
                         className={`${styles.field} ${styles.searchBtn}`}>Find</button>
                 </div>
